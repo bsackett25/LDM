@@ -1,3 +1,10 @@
+6.12.14-GEMPAK-hotfix
+    NOAAPort Ingestion:
+        On behalf of NOAA, incorporated changes to gempak/{gb2ftim,gb22gem}.c
+        and gempak/tables/*.tbl from LDM version 6.13.7.70 in order to eliminate
+        the spurious "Couldn't decode GRIB2..." message and update the GEMPAK
+        tables
+
 6.12.14
     Logging:
         Corrected bug dealing with variadic arguments that could cause a crash

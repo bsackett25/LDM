@@ -7,6 +7,7 @@
 000 000 000 001 Temperature                      K                    TMPK             0  -9999.00
 000 000 000 002 Temperature                      K                    TMPK             0  -9999.00
 000 000 000 005 Temperature                      K                    TMPK             0  -9999.00
+000 000 000 006 Temperature                      K                    TMPK             0  -9999.00
 000 000 000 008 Temperature                      K                    TMPK             0  -9999.00
 000 000 000 009 Temperature                      K                    TMPK             0  -9999.00
 000 000 000 011 Temperature                      K                    TMPK             0  -9999.00
@@ -57,6 +58,9 @@
 000 000 019 000 Turbulent Transfer Coefficient f Numeric              TTCHT            0  -9999.00
 000 000 020 000 Turbulent Diffusion Coefficient  m**2 s**-1           TDCHT            0  -9999.00
 000 000 021 000 Apparent Temperature             K                    APTMP            0  -9999.00
+000 000 027 000 Wet Bulb Temperature             K                    WETBT            0  -9999.00
+000 000 027 015 Maximum Wet Bulb Temp Aloft      K                    MWBTA            0  -9999.00
+
 !000 000 102 000 Snow Phase Change Heat Flux      K                    SNOHF            0  -9999.00
 !
 ! mositure
@@ -83,9 +87,10 @@
 000 001 007 008 Precipitation rate               kg m**-2 s**-1       PRATE            0  -9999.00
 000 001 007 011 Precipitation rate               kg m**-2 s**-1       PRATE            0  -9999.00
 000 001 008 008 Total precipitation              kg m**-2             APCP             0     -0.01
+000 001 008 009 Precipitation Probability        %                    PP--             0  -9999.00
+000 001 008 010 Total precipitation              kg m**-2             APCP             0     -0.01
 000 001 008 011 Total precipitation              kg m**-2             APCP             0     -0.01
 000 001 008 012 Total precipitation              kg m**-2             APCP             0     -0.01
-000 001 008 009 Precipitation Probability        %                    PP--             0  -9999.00
 000 001 008 019 Precipitation Below Normal       %                    PPBN             0  -9999.00
 000 001 008 029 Precipitation Near Normal        %                    PPNN             0  -9999.00
 000 001 008 039 Precipitation Above Normal       %                    PPAN             0  -9999.00
@@ -110,6 +115,7 @@
 000 001 017 000 Snow Age                         d                    SNOAG            0  -9999.00
 000 001 018 000 Absolute Humidity                kg m**-3             ABSH             0  -9999.00
 000 001 019 000 Precipitation Type               code table           PTYPE            0  -9999.00
+000 001 019 005 Precipitation Type               code table           PTYPE            0  -9999.00
 000 001 020 000 Integrated Liquid Water          kg m**-2             ILIQW            0  -9999.00
 000 001 021 000 Condensate                       kg kg**-1            TCOND            0  -9999.00
 000 001 022 000 Cloud Mixing Ratio               kg kg**-1            CWTR             0  -9999.00
@@ -122,6 +128,9 @@
 000 001 027 008 Maximum Relative Humidity        %                    RHMX             0  -9999.00
 000 001 028 000 Maximum Absolute Humidity        kg m**-3             MAXAH            0  -9999.00
 000 001 029 008 Total Snowfall                   m                    SNOW             0  -9999.00
+000 001 029 009 Total Snowfall                   m                    SNOW             0  -9999.00
+000 001 029 010 Total Snowfall                   m                    SNOW             0  -9999.00
+000 001 029 012 Total Snowfall                   m                    SNOW             0  -9999.00
 000 001 030 000 Precipitable Water Category      code table           PWCAT            0  -9999.00
 000 001 031 000 Hail                             m                    HAIL             0  -9999.00
 000 001 032 000 Graupel (snow pellets)           kg kg**-1            GRMR             0  -9999.00
@@ -151,6 +160,7 @@
 000 001 052 011 Total Precipitation Rate         kg m**-2 s**-1       TPRATE           0  -9999.00
 000 001 053 000 Total Snowfall Rate Water Equiv  kg m**-2 s**-1       TSRWE            0  -9999.00
 000 001 053 001 Total Snowfall Rate Water Equiv  kg m**-2 s**-1       TSRWE            0  -9999.00
+000 001 053 009 Total Snowfall Rate Water Equiv  kg m**-2 s**-1       TSRWE            0  -9999.00
 000 001 053 011 Total Snowfall Rate Water Equiv  kg m**-2 s**-1       TSRWE            0  -9999.00
 000 001 054 000 Large Scale Precipitation Rate   kg m**-2 s**-1       LSPRATE          0  -9999.00
 000 001 055 000 Convective Snowfall Rate Water E kg m**-2 s**-1       CSRWE            0  -9999.00
@@ -208,8 +218,10 @@
 000 002 001 000 Wind Speed                       m s**-1              SPED             0  -9999.00
 000 002 001 002 Wind Speed                       m s**-1              SPED             0  -9999.00
 000 002 001 005 Wind Speed                       m s**-1              SPED             0  -9999.00
+000 002 001 006 Wind Speed                       m s**-1              SPED             0  -9999.00
 000 002 001 008 Wind Speed                       m s**-1              SPED             0  -9999.00
 000 002 001 009 Wind Speed                       m s**-1              SPED             0  -9999.00
+000 002 001 010 Wind Speed                       m s**-1              SPED             0  -9999.00
 000 002 002 000 u-component of wind              m s**-1              UREL             0  -9999.00
 000 002 002 001 u-component of wind              m s**-1              UREL             0  -9999.00
 000 002 002 002 u-component of wind              m s**-1              UREL             0  -9999.00
@@ -249,6 +261,7 @@
 000 002 020 000 Boundary Layer Dissipation       W m**-2              BLDIS            0  -9999.00
 000 002 021 000 Maximum Wind Speed               m s**-1              MAXGUST          0  -9999.00
 000 002 022 000 Wind Speed (gust)                m s**-1              GUST             0  -9999.00
+000 002 022 006 Wind Speed (gust)                m s**-1              GUST             0  -9999.00
 000 002 023 000 U-Component of Wind (Gust)       m s**-1              UGUST            0  -9999.00
 000 002 024 000 V-Component of Wind (Gust)       m s**-1              VGUST            0  -9999.00
 000 002 025 000 Vertical Speed Shear             s**-1                VWSH             0  -9999.00
@@ -280,6 +293,7 @@
 000 003 001 000 Pressure Reduced to MSL          Pa                   PMSL            -2  -9999.00
 000 003 001 001 Pressure Reduced to MSL          Pa                   PMSL            -2  -9999.00
 000 003 001 002 Pressure Reduced to MSL          Pa                   PMSL            -2  -9999.00
+000 003 001 006 Pressure Reduced to MSL          Pa                   PMSL            -2  -9999.00
 000 003 001 011 Pressure Reduced to MSL          Pa                   PMSL            -2  -9999.00
 000 003 002 000 Pressure Tendency                Pa s**-1             PTND            -2  -9999.00
 000 003 003 000 ICAO Standard Atm Ref Height     m                    ICAHT            0  -9999.00
@@ -528,11 +542,13 @@
 !23|123|123|123|12345678901234567890123456789012|12345678901234567890|123456789012|12345|123456.89
 000 019 000 000 Visibility                       m                    VIS              0  -9999.00
 000 019 000 005 Visibility                       m                    VIS              0  -9999.00
+000 019 000 006 Visibility                       m                    VIS              0  -9999.00
 000 019 001 000 Albedo                           %                    ALBDO            0  -9999.00
 000 019 001 008 Albedo                           %                    ALBDO            0  -9999.00
 000 019 001 011 Albedo                           %                    ALBDO            0  -9999.00
 000 019 002 000 Thunderstorm Probability         %                    TSTM             0  -9999.00
 000 019 002 008 Thunderstorm Probability         %                    TSTM             0  -9999.00
+000 019 002 009 Thunderstorm Probability         %                    TSTM             0  -9999.00
 000 019 003 000 Mixed Layer Depth                m                    MIXHT            0  -9999.00
 000 019 004 000 Volcanic Ash                     code table           VOLASH           0  -9999.00
 000 019 005 000 Icing Top                        m                    ICIT             0  -9999.00
@@ -558,6 +574,7 @@
 000 019 025 000 Weather                          code table           WIWW             0  -9999.00
 000 019 026 000 Convective Outlook               code table           CONVO            0  -9999.00
 000 019 027 000 Icing Scenario                   code table           ICESC            0  -9999.00
+000 019 028 000 Mtn Wave Turb (eddy disp rate)   m**2/3 s**-1         MWTURB           0  -9999.00
 !000 019 028-191 000 Reserved                                                           0  -9999.00
 !000 019 192-254 000 Reserved for local use                                             0  -9999.00
 000 019 255 000 Missing                                                                0  -9999.00
@@ -680,13 +697,13 @@
 002 000 000 011 Land cover (1=land, 2=sea)       Proportion           LAND             0  -9999.00
 002 000 001 000 Surface Roughness                m                    SFCR             0  -9999.00
 002 000 002 000 Soil Temperature                 K                    SLTK             0  -9999.00
-002 000 002 001 Soil temperature                 K                    SLTK             0  -9999.00
-002 000 002 011 Soil temperature                 K                    SLTK             0  -9999.00
+002 000 002 001 Soil Temperature                 K                    SLTK             0  -9999.00
+002 000 002 011 Soil Temperature                 K                    SLTK             0  -9999.00
 002 000 003 000 Soil Moisture Content            kg m**-2             SOILM            0  -9999.00
 002 000 004 000 Vegetation                       %                    VEG              0  -9999.00
 002 000 005 000 Water Runoff                     kg m**-2             WATR             0  -9999.00
-002 000 005 008 Water runoff                     kg m**-2             WATR             0  -9999.00
-002 000 005 011 Water runoff                     kg m**-2             WATR             0  -9999.00
+002 000 005 008 Water Runoff                     kg m**-2             WATR             0  -9999.00
+002 000 005 011 Water Runoff                     kg m**-2             WATR             0  -9999.00
 002 000 006 000 Evapotranspiration               kg**-2 s**-1         EVAPT            0  -9999.00
 002 000 007 000 Model Terrain Height             m                    MTERH            0  -9999.00
 002 000 008 000 Land Use                         code table           LANDU            0  -9999.00
@@ -703,9 +720,9 @@
 002 000 019 000 Temperature parameter in canopy  Proportion           RCT              0  -9999.00
 002 000 020 000 Humidity parameter in canopy con Proportion           RCQ              0  -9999.00
 002 000 021 000 Soil moisture parameter in canop Proportion           RCSOL            0  -9999.00
-002 000 022 000 Soil Moisture top 20cm           kg m**-3             SOILM            0  -9999.00
-002 000 022 001 Soil moisture top 20cm           kg m**-3             SOILM            0  -9999.00
-002 000 022 011 Soil moisture top 20cm           kg m**-3             SOILM            0  -9999.00
+002 000 022 000 Soil Moisture Top 20cm           kg m**-3             SOILM            0  -9999.00
+002 000 022 001 Soil Moisture Top 20cm           kg m**-3             SOILM            0  -9999.00
+002 000 022 011 Soil Moisture Top 20cm           kg m**-3             SOILM            0  -9999.00
 002 000 023 000 Column-Integrated Soil Water     kg m**-2             CISOILW          0  -9999.00
 002 000 024 000 Heat Flux                        W m**-2              HFLUX            0  -9999.00
 002 000 025 000 Volumetric Soil Moisture         m**3 m**-3           VSOILM           0  -9999.00
@@ -762,8 +779,10 @@
 002 004 000 000 Fire Outlook                     code table           FIREOLK          0  -9999.00
 002 004 001 000 Fire Outlook Due to Dry Thunders code table           FIREODT          0  -9999.00
 002 004 002 000 Haines Index                     Numeric              HINDEX           0  -9999.00
+002 004 002 008 Haines Index                     Numeric              HINDEX           0  -9999.00
 002 004 003 000 Fire Burned Area                 %                    FBAREA           0  -9999.00
 002 004 004 000 Fosberg Index                    Numeric              FOSINDX          0  -9999.00
+002 004 004 008 Fosberg Index                    Numeric              FOSINDX          0  -9999.00
 !002 004 005-191 000 Reserved                                                          0  -9999.00
 !002 004 192-254 000 Reserved for Local Use                                            0  -9999.00
 002 004 255 000 Missing                                                                0  -9999.00
